@@ -76,12 +76,13 @@ try:
             "Operating System :: OS Independent",
         ],
         package_data={
-            "taskweaver.planner": ["*"],  # prompt
-            "taskweaver.code_interpreter.code_generator": ["*"],  # prompt
+            "taskweaver": ["*.*", "memory/*", "planner/*", "code_interpreter/code_generator/*"],  # include all files
         },
         entry_points={
             "console_scripts": ["taskweaver=taskweaver.__main__:main"],
         },
+
+
     )
 finally:
     revert_version_file()
